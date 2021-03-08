@@ -5,11 +5,10 @@ using System.Text;
 //Base class or Parent class.  
 class Shape
 {
-    public Shape(int height, int width, int Area)
+    public Shape(int height, int width)
     {
         Height = height;
         Width = width;
-        Area = (int)(Height * Width);
     }
 
     public Shape() { }
