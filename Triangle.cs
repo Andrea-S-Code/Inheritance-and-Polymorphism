@@ -7,7 +7,6 @@ using System.Text;
 //Drived class or Child class.  
 class Triangle : Shape
 {
-    public Triangle() { }
     public string Style; // style of triangle  
 
     public int side3 { get; internal set; }
@@ -24,31 +23,31 @@ class Triangle : Shape
         Console.WriteLine("Triangle is " + Style);
     }
 
-    public void DisplayAngles()
-    {
-        Console.WriteLine("Angles of the triangle is " + Style);
-        float CalculateArea1 = Triangle.CalculateArea((int)Height, (int)Width, (int)side3);
-        Console.WriteLine(CalculateArea1);
-
-    }
-
     public static float CalculateArea(int Height, int Width, int side3)
     {
-        float alpha = (float)Math.Acos((Width + side3 - Height) / (2 * Width * side3));
-        float betta = (float)Math.Acos((Height + side3 - Width) / (2 * Height * Width));
-        float gamma = (float)Math.Acos((Height + Width - side3) / (2 * Height * Width));
+        return (Height + Width + side3) / 2;
+    }
 
-        alpha = (float)(alpha * 180 / Math.PI); 
+    public int DisplayAngles(int Height, int Width, int side3)
+
+    {
+        float a = (Height*Height);
+        float b = (Width*Width);
+        float c = (side3*side3);
+
+
+        float alpha = (float)Math.Acos((((b + c - a) / (2 * Width * side3))));
+        float betta = (float)Math.Acos(((a + c - b) / (2 * Height * side3)));
+        float gamma = (float)Math.Acos(((a + b - c) / (2 * Height * Width)));
+
+        alpha = (float)(alpha * 180 / Math.PI);
         betta = (float)(betta * 180 / Math.PI);
         gamma = (float)(gamma * 180 / Math.PI);
 
-        Console.WriteLine("Angles of the triangle are: " + alpha + " " + betta + " " + gamma);
+        Console.WriteLine("Angles of the triangle are: " + alpha + " " +betta + " " + gamma);
 
-        return alpha;
-        
-
+        return 000000000000000000000000000000; //This is here becuase it needed a return value (means nothing)
     }
-
+    
     
 }
-
