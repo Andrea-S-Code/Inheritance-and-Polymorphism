@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,8 +14,7 @@ namespace Inheritance
 
         public override int CalculateArea(int Height, int Width)
         {
-            var answer = CalculateArea((int)Height, (int)Width);
-            return answer;
+            return Height * Width;
         }
     }
 }
