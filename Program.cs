@@ -1,4 +1,4 @@
-﻿using Inheritance;
+using Inheritance;
 using System;
 
 //https://www.c-sharpcorner.com/UploadFile/9582c9/inheritance-with-example-in-C-Sharp/​
@@ -8,7 +8,9 @@ using System;
 //This class can then be inherited by other, more specific classes, each adding those things that are unique to it.
 //Polymorphism: used when you need to define one interface and have multiple implementations for it
 
-class MainClass
+class MainClass : Shape
+
+
 {
     public static void Main(string[] args)
     {
@@ -18,11 +20,11 @@ class MainClass
         t1.side3 = (int)2.0;
         //Display triangle 1
         t1.GetArea();
-        int CalculateArea = t1.CalculateArea((int)t1.Height, (int)t1.Width);
-        float CalculateArea1 = Triangle.CalculateArea((int)t1.Height, (int)t1.Width, (int)t1.side3);
+        Console.WriteLine("Triangle is " + t1.CalculateArea((int)t1.Height, (int)t1.Width));
+        Console.WriteLine("Triangle is " + t1.CalculateArea((int)t1.Height, (int)t1.Width), (int)t1.side3);
         t1.ShowDim();
         t1.ShowStyle();
-
+        
         Circle c1 = new Circle();
         c1.Width = (int)2.0;
         c1.Height = (int)2.0;
@@ -40,6 +42,4 @@ class MainClass
     }
 
 }
-
-
 
