@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -31,7 +31,7 @@ class Shape
     }
 
     public virtual int CalculateArea(int Height, int Width)
-    {
+    { 
         return Height * Width;
     }
 
