@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,9 +15,7 @@ class Triangle : Shape
     // Return area of triangle.  
     public override int CalculateArea(int Height, int Width)
     {
-        var answer = CalculateArea((int)Height, (int)Width);
-        answer = answer / 2;
-        return answer;
+        return Height * Width / 2;
     }
 
     // Display a triangle's style.  
@@ -40,12 +38,17 @@ class Triangle : Shape
         float betta = (float)Math.Acos((Height + side3 - Width) / (2 * Height * Width));
         float gamma = (float)Math.Acos((Height + Width - side3) / (2 * Height * Width));
 
-        alpha = (float)(alpha * 180 / Math.PI);
+        alpha = (float)(alpha * 180 / Math.PI); 
         betta = (float)(betta * 180 / Math.PI);
         gamma = (float)(gamma * 180 / Math.PI);
 
-        Console.WriteLine("Angles of the triangle are: ");
+        Console.WriteLine("Angles of the triangle are: " + alpha + " " + betta + " " + gamma);
+
         return alpha;
+        
+
     }
 
+    
 }
+
